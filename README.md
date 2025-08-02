@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# E-Commerce App 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant e-commerce web application built with **React** and **TypeScript**. Users can browse clothing and shop items, view item details, and explore a clean UI with routing.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🧥 Browse a collection of clothes with images and details
+- 🛒 View shop items with prices and descriptions
+- 🔗 Click on items to view detailed pages using dynamic routes
+- 📱 Responsive layout for different screen sizes
+- 🌐 Built with React Router and TypeScript
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- React Router DOM
+- CSS / Tailwind (optional)
+- Git + GitHub for version control
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Folder Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+e-commerce-app/
+│
+├── public/
+│ └── assets/ (images for clothes and shop items)
+│
+├── src/
+│ ├── components/
+│ │ ├── Navbar.tsx
+│ │ └── Footer.tsx
+│ ├── data/
+│ │ ├── clothes.ts
+│ │ └── shop.ts
+│ ├── pages/
+│ │ ├── HomePage.tsx
+│ │ ├── ClothPage.tsx
+│ │ ├── ClothDetails.tsx
+│ │ ├── ShopPage.tsx
+│ │ └── ShopDetails.tsx
+│ └── App.tsx
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Josephine Uleh
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+GitHub: @your-github-jossy1995
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
